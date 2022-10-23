@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Змінні шрифти: вага</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <style>
+        /*
+        Mutator Sans is created by LettError (https://github.com/LettError/mutatorSans)
+        and is used here under the terms of its license:
+        https://github.com/LettError/mutatorSans/blob/master/LICENSE
+        */
+    </style>
+
+    <style class="editable">
+        @font-face {
+            src: url('fonts/MutatorSans.ttf');
+            font-family: 'MutatorSans';
+            font-style: normal;
+            font-weight: 1 1000;
+        }
+
+        label {
+            font: 1rem monospace;
+            white-space: nowrap;
+        }
+
+        .sample {
+            text-transform: uppercase;
+            font: 1.5rem 'MutatorSans', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="preview">
+
+        <div class="container">
+            <p class="sample">Це щастя: мати таку долю, як у мене…Чуюся добре, бо нікому не зробив зла, бо дбав не
+                тільки про себе. І від того мені світло на душі.</p>
+        </div>
+
+    </section>
+
+    <textarea class="playable playable-css" style="height: 280px;">
+@font-face {
+  src: url('fonts/MutatorSans.ttf');
+  font-family:'MutatorSans';
+  font-style: normal;
+  font-weight: 1 1000;
+}
+
+label {
+  font: 1rem monospace;
+  white-space: nowrap;
+}
+
+.sample {
+  text-transform: uppercase;
+  font: 1.5rem 'MutatorSans', sans-serif;
+  font-weight: 500;
+}
+    </textarea>
+
+    <textarea class="playable playable-html" style="height: 130px;">
+<div class="container">
+  <p class="sample">Це щастя: мати таку долю, як у мене…Чуюся добре, бо нікому не зробив зла, бо дбав не тільки про себе. І від того мені світло на душі.</p>
+</div>
+    </textarea>
+
+    <div class="playable-buttons">
+        <input id="reset" type="button" value="Скинути" />
+    </div>
+</body>
+
+<script src="../assets/playable.js"></script>
+
+</html>
