@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>:is() і :where(), приклади та відмінності</title>
+
+    <style>
+        html {
+            font-family: sans-serif;
+            font-size: 200%;
+        }
+
+        :is(section.is-styling, aside.is-styling, footer.is-styling) a {
+            color: red;
+        }
+
+        :where(section.where-styling, aside.where-styling, footer.where-styling) a {
+            color: orange;
+        }
+
+        footer a {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <h2>Посилання, оформлені за допомогою :is()</h2>
+        <section class="is-styling">
+            <p>
+                Це мій головний вміст. Тут <a href="https://mozilla.org">є посилання</a>.
+            </p>
+        </section>
+
+        <aside class="is-styling">
+            <p>
+                Це мій побічний вміст. Тут <a href="https://mozilla.org">також є посилання</a>.
+            </p>
+        </aside>
+
+        <footer class="is-styling">
+            <p>
+                Це мій нижній колонтитул, у якому також є <a href="https://mozilla.org">посилання</a>.
+            </p>
+        </footer>
+    </article>
+
+    <article>
+        <h2>Посилання, оформлені за допомогою :where()</h2>
+        <section class="where-styling">
+            <p>
+                Це мій головний вміст. Тут <a href="https://mozilla.org">є посилання</a>.
+            </p>
+        </section>
+
+        <aside class="where-styling">
+            <p>
+                Це мій побічний вміст. Тут <a href="https://mozilla.org">також є посилання</a>.
+            </p>
+        </aside>
+
+        <footer class="where-styling">
+            <p>
+                Це мій нижній колонтитул, у якому також є <a href="https://mozilla.org">посилання</a>.
+            </p>
+        </footer>
+    </article>
+</body>
+
+</html>
